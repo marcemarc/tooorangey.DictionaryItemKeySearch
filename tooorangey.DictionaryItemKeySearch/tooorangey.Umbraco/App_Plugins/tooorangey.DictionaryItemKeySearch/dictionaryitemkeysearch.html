@@ -1,0 +1,50 @@
+﻿<div class="dictionaryitemkeysearch" ng-controller="tooorangey.DictionaryItemKeySearch">
+    <h2>Dictionary Item Search</h2>
+    <p>Select the language and enter the translated text, and lets see if we can find the dictionary key</p>
+    <div class="control-group umb-control-group">
+        <div class="umb-el-wrap">
+            <label class="control-label" for="selectLang">
+                Select Language: 
+            </label>
+            <div class="controls controls-row">
+                <select ng-options="l.FriendlyName for l in Languages" ng-model="selectedLanguage"></select>
+            </div>
+        </div>
+
+            <div class="umb-el-wrap">
+              <label class="control-label" for="searchTerm">
+                  Search Text:                  
+                </label>
+                <div class="controls controls-row">
+                    <input name="searchTerm" type="text" ng-model="searchTerm" no-dirty-check class="col-md-12" /> <button class="btn btn-primary" ng-click="search()">Search</button>
+                 </div>
+            </div>
+        </div>
+    <div ng-bind="StatusMessage"></div>
+    <table ng-show="hasResults && !editMode" class="table table-hover">
+        <tr><th>Dictionary Key</th><th>Dictionary Value</th><th>View in Dictionary</th><th>Edit</th></tr>
+        <tbody>
+    <tr class="diks-search-result" ng-repeat="item in dictionaryItems">
+  
+        <td>{{item.Key}} </td><td>{{item.Value}}</td><td><button class="btn btn-small btn-secondary" ng-click="edit(item.Id)">View</button></td><td><button class="btn btn-small btn-primary" ng-click="showEditForm(item)">Edit</button></td>
+
+    </tr>
+            </tbody>
+  </table>
+    <div ng-show="editMode" class="diks-edit-item">
+        <h2>Edit '{{editItemKey}}' for {{selectedLanguage.FriendlyName}}</h2>
+
+        <div class="control-group umb-control-group">
+            <div class="umb-el-wrap">
+                <label class="control-label" for="selectLang">
+                    Dictionary Value:
+                </label>
+                <div class="controls controls-row">
+                    <textarea ng-model="editItemText" />
+                    <p><button class="btn btn-secondary" ng-click="cancelEditForm()">Cancel</button> <button class="btn btn-primary" ng-click="saveItem()">Save</button></p>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>

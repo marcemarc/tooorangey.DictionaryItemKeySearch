@@ -1,0 +1,3 @@
+﻿div.latestPostsDashboard div.statusUpdateContainer { width: 25%; margin: 0 3% 3% 0; border: 1px solid #cccccc;padding: 15px;float: left;}
+div.latestPostsDashboard div.statusUpdateContainer p { min-height: 75px;}
+div.latestPostsDashboard div.statusUpdateContainer span { float: right;color: #cccccc;font-size: 75%;}
