@@ -1,0 +1,10 @@
+ <section alias="tooorangeydictionary">
+    <areas>
+      <area>settings</area>
+    </areas>
+    <tab caption="Dictionary Finder">
+      <control showOnce="true" addPanel="true" panelCaption="">
+      /App_Plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.html
+      </control>
+    </tab>
+  </section>

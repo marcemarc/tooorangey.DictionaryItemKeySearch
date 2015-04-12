@@ -1,0 +1,10 @@
+﻿{
+ 	"$schema": "/App_Plugins/manifestSchema.json",
+	"javascript":[
+		"~/app_plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.controller.js",
+		"~/app_plugins/tooorangey.DictionaryItemKeySearch/dictionaritemkeysearch.service.js"
+	],
+	"css" : [
+		"~/app_plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.css"
+	]
+}
