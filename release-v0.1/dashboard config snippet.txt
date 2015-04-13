@@ -1,10 +1,13 @@
- <section alias="tooorangeydictionary">
+<Actions>
+<Action runat="install" undo="false" alias="addDashboardSection" dashboardAlias="tooorangeydictionary">
+ <section>
     <areas>
-      <area>settings</area>
+      <area>translation</area>
     </areas>
     <tab caption="Dictionary Finder">
-      <control showOnce="true" addPanel="true" panelCaption="">
-      /App_Plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.html
+      <control showOnce="true" addPanel="true" panelCaption="">/App_Plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.html
       </control>
     </tab>
   </section>
+</Action>
+</Actions>

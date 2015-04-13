@@ -58,8 +58,10 @@
         $scope.cancelEditForm = function () {
     
             $scope.editMode = false;
+        
             $scope.editItemKey = '';
             $scope.editItemText = '';
+            $scope.editForm.$setPristine();
             $scope.search();
 
         }
@@ -75,9 +77,11 @@
         
                 if (response.status == 200){
                     notificationsService.success('Dictionary Item ' + editItemKey + ' updated to ', editItemText);
+                 
                     $scope.editMode = false;
                     $scope.editItemKey = '';
                     $scope.editItemText = '';
+                    $scope.editForm.$setPristine();
                     $scope.search();
 
                 }

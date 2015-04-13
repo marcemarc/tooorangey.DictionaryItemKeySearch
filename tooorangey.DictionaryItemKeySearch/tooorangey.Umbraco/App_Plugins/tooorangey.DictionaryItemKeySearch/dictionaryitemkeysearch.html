@@ -7,7 +7,7 @@
                 Select Language: 
             </label>
             <div class="controls controls-row">
-                <select ng-options="l.FriendlyName for l in Languages" ng-model="selectedLanguage"></select>
+                <select ng-options="l.FriendlyName for l in Languages" ng-model="selectedLanguage" no-dirty-check></select>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
   </table>
     <div ng-show="editMode" class="diks-edit-item">
         <h2>Edit '{{editItemKey}}' for {{selectedLanguage.FriendlyName}}</h2>
-
+        <form name="editForm">
         <div class="control-group umb-control-group">
             <div class="umb-el-wrap">
                 <label class="control-label" for="selectLang">
@@ -45,6 +45,6 @@
                     </div>
                 </div>
             </div>
-
+            </form>
 
             </div>
