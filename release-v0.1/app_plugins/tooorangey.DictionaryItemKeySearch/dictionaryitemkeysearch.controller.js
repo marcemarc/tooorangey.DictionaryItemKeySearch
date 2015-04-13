@@ -38,7 +38,7 @@
         });
     }
     $scope.edit = function (id) {
-       
+        $scope.editForm.$setPristine();
             //get dictionary item value for the key and selected language
             var url = '%252Fumbraco%252Fsettings%252FeditDictionaryItem.aspx%253Fid=' +id;
             top.location = '/umbraco/#/settings/framed/' + url;
@@ -80,8 +80,8 @@
                  
                     $scope.editMode = false;
                     $scope.editItemKey = '';
-                    $scope.editItemText = '';
-                    $scope.editForm.$setPristine();
+                    $scope.editItemText = '';              
+                    $scope.editForm.$setPristine();           
                     $scope.search();
 
                 }
