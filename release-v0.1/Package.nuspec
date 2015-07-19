@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>tooorangey.uDictionaryItemSearch</id>
+    <version>1.0.0</version>
+    <authors>marcemarc</authors>
+    <owners>marcemarc</owners>
+    <projectUrl>https://our.umbraco.org/projects/backoffice-extensions/udictionaryitemsearch</projectUrl>
+	<iconUrl>http://tooorangey.co.uk/media/1073/dictionaryitemkeysearchicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Search for an Umbraco Dictionary item, by value, ie when you don't know the Dictionary Key name but you can see the text it produces. </description>
+    <releaseNotes>First release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Umbraco</tags>
+    <dependencies></dependencies>
+  </metadata>
+</package>
