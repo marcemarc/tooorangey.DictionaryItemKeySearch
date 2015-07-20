@@ -2,7 +2,8 @@
 <package >
   <metadata>
     <id>tooorangey.uDictionaryItemSearch</id>
-    <version>1.0.0</version>
+	<title>Dictionary Item Search for Umbraco</title>
+	<version>1.0.6</version>
     <authors>marcemarc</authors>
     <owners>marcemarc</owners>
     <projectUrl>https://our.umbraco.org/projects/backoffice-extensions/udictionaryitemsearch</projectUrl>

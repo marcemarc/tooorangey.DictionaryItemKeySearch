@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<dashBoard xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+
+ <section  alias="uDictionaryItemSearch" xdt:Transform="Insert">
+    <areas>
+      <area>translation</area>
+	   <area>settings</area>
+    </areas>
+    <tab caption="Dictionary Finder">
+      <control showOnce="true" addPanel="true" panelCaption="">/App_Plugins/tooorangey.DictionaryItemKeySearch/dictionaryitemkeysearch.html
+      </control>
+    </tab>
+  </section>
+  </dashBoard>
