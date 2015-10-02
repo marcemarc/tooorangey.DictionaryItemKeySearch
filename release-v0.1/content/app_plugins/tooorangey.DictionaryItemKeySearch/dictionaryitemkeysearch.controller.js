@@ -1,18 +1,18 @@
-﻿angular.module("umbraco").controller("tooorangey.DictionaryItemKeySearch", function ($scope, $http,angularHelper,notificationsService) {   
+﻿angular.module("umbraco").controller("tooorangey.DictionaryItemKeySearch", function ($scope, $http,angularHelper,notificationsService) {
 
     $scope.isSearch = false;
     $scope.hasResults = false;
 
     $scope.search = function () {
-   
+
         var selectedLanguageId = $scope.selectedLanguage.id;
-     
+
         var searchTerm = $scope.searchTerm;
         $scope.editMode = false;
-  
-        $http.get("/umbraco/backoffice/api/DictionarySearch/SearchDictionaryItems/?searchTerm=" + searchTerm + "&languageId=" + selectedLanguageId).then(function (response) {
+
+        $http.get("backoffice/api/DictionarySearch/SearchDictionaryItems/?searchTerm=" + searchTerm + "&languageId=" + selectedLanguageId).then(function (response) {
             var matchingItems = response.data;
-    
+
             $scope.isSearch = true;
             $scope.StatusMessage = matchingItems.StatusMessage;
             $scope.hasResults = matchingItems.HasSearchResults;
@@ -26,9 +26,9 @@
         $scope.editMode = false;
         $scope.SearchTerm = "";
         //get all languages
-        $http.get("/umbraco/backoffice/api/DictionarySearch/GetAllLanguages").then(function (response) {
+        $http.get("backoffice/api/DictionarySearch/GetAllLanguages").then(function (response) {
             var allLanguages = response.data;
-       
+
             $scope.Languages = allLanguages;
 
             //get current user
@@ -40,14 +40,14 @@
     $scope.edit = function (id) {
         $scope.editForm.$setPristine();
             //get dictionary item value for the key and selected language
-            var url = '%252Fumbraco%252Fsettings%252FeditDictionaryItem.aspx%253Fid=' +id;
-            top.location = '/umbraco/#/settings/framed/' + url;
-        
+            var url = 'settings%252FeditDictionaryItem.aspx%253Fid=' +id;
+            top.location = '#/settings/framed/' + url;
+
            // $scope.EditMode = true;
           //  $scope.EditItemText = "the text from the dictionary item"
 
         };
-    
+
 
         $scope.showEditForm = function (editItem) {
             $scope.editMode = true;
@@ -56,9 +56,9 @@
 
         }
         $scope.cancelEditForm = function () {
-    
+
             $scope.editMode = false;
-        
+
             $scope.editItemKey = '';
             $scope.editItemText = '';
             $scope.editForm.$setPristine();
@@ -70,18 +70,18 @@
             var editItemKey = $scope.editItemKey;
             var editItemText = $scope.editItemText;
             {msg:'hello word!'}
-            $http.post("/umbraco/backoffice/api/DictionarySearch/UpdateDictionaryItem", { Id: String(selectedLanguageId), key: editItemKey, value: editItemText }
+            $http.post("backoffice/api/DictionarySearch/UpdateDictionaryItem", { Id: String(selectedLanguageId), key: editItemKey, value: editItemText }
             ).then(function (response) {
                 //check response status
-        
-        
+
+
                 if (response.status == 200){
                     notificationsService.success('Dictionary Item ' + editItemKey + ' updated to ', editItemText);
-                 
+
                     $scope.editMode = false;
                     $scope.editItemKey = '';
-                    $scope.editItemText = '';              
-                    $scope.editForm.$setPristine();           
+                    $scope.editItemText = '';
+                    $scope.editForm.$setPristine();
                     $scope.search();
 
                 }
@@ -90,10 +90,10 @@
                 }
             });
        };
-    
 
 
-    
+
+
 
    $scope.load();
 
