@@ -38,7 +38,7 @@ namespace tooorangey.DictionaryItemSearch.Api
                 AddToList(child, ref list);
             }
         }
-       
+       [HttpGet]
         public IEnumerable<Language> GetAllLanguages()
         {
             var allLangs = Language.GetAllAsList();
