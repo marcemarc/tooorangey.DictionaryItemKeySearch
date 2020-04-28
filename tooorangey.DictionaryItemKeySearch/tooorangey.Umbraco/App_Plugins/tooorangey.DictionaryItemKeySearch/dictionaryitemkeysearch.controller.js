@@ -40,8 +40,7 @@
     $scope.edit = function (id) {
         $scope.editForm.$setPristine();
             //get dictionary item value for the key and selected language
-            var url = 'settings%252FeditDictionaryItem.aspx%253Fid=' +id;
-            top.location = '#/settings/framed/' + url;
+            top.location = '/umbraco/#/settings/dictionary/edit/' + id;
 
            // $scope.EditMode = true;
           //  $scope.EditItemText = "the text from the dictionary item"
