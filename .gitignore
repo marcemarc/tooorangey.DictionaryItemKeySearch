@@ -23,3 +23,10 @@ Cached/
 
 **/DictionaryItemKeySearch-v7
 **/toorangey.umbraco
+V8/solution/.vs/
+
+V8/solution/obj/
+
+V8/solution/packages/
+
+V8/solution/Properties/
